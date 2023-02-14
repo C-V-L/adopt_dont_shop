@@ -1,3 +1,7 @@
+Pet.destroy_all
+ApplicationPet.destroy_all
+Shelter.destroy_all
+
 @pound = Shelter.create!(foster_program: true, name: 'The Pound', city: "Denver", rank: 1)
 @humaine = Shelter.create!(foster_program: true, name: 'Humaine Society', city: "Boulder", rank: 1)
 
