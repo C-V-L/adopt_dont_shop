@@ -17,5 +17,8 @@ class Pet < ApplicationRecord
     where("name ILIKE ?", "%#{pet_name}%")
   end
 
-
+  def approved?(app_id)
+    
+    require 'pry'; binding.pry
+  end
 end

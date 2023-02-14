@@ -6,5 +6,6 @@ class ApplicationPetsController < ApplicationController
     @has_pets = @application.has_pets?
     redirect_to "/applications/#{@application.id}"
   end
+
   
 end
