@@ -7,12 +7,4 @@ class ApplicationPet < ApplicationRecord
   def self.find_by_app_pet(app_id, pet_id)
     where(application_id: app_id, pet_id: pet_id).first
   end
-
-  def self.find_by_app(app_id)
-    where(application_id: app_id)
-  end
-
-  def join_with_pets
-    require 'pry'; binding.pry
-  end
 end

@@ -79,5 +79,11 @@ RSpec.describe Shelter, type: :model do
         expect(Shelter.with_pending_apps).to eq([@shelter_1])
       end
     end
+
+    describe '.sort_reverse_alphabetical' do
+      it 'returns the all shelters sorted by name in reverse alphabetical' do
+        expect(Shelter.sort_reverse_alphabetical).to eq([@shelter_2, @shelter_3, @shelter_1])
+      end
+    end
   end
 end
