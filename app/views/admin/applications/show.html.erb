@@ -2,9 +2,9 @@
 <% @pets.each do |pet|%>
   <div id=<%=pet.id%>>
   <h3><%= pet.name %></h3>
-  <h5><%= "Application Status: #{pet.status(@application.id)}" %></h5>
+  <h5><%= "Application Status: #{pet.pet_status(@application.id)}" %></h5>
   
-  <% if pet.status(@application.id) == "Pending" %>
+  <% if pet.pet_status(@application.id) == "Pending" %>
     <%= button_to "Approve Application", "/admin/application_pets/#{@application.id}", method: :patch, params: {status: "Accepted", pet_id: pet.id}%>
     <%= button_to "Reject Application", "/admin/application_pets/#{@application.id}", method: :patch, params: {status: "Rejected", pet_id: pet.id}%>  
   <% end %>
