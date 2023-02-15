@@ -5,8 +5,8 @@
   <h5><%= "Application Status: #{pet.pet_status(@application.id)}" %></h5>
   
   <% if pet.pet_status(@application.id) == "Pending" %>
-    <%= button_to "Approve Application", "/admin/application_pets/#{@application.id}", method: :patch, params: {status: "Accepted", pet_id: pet.id}%>
-    <%= button_to "Reject Application", "/admin/application_pets/#{@application.id}", method: :patch, params: {status: "Rejected", pet_id: pet.id}%>  
+    <%= button_to "Approve Application", "/admin/application_pets/#{@application.id}", method: :patch, params: {status: 1, pet_id: pet.id}%>
+    <%= button_to "Reject Application", "/admin/application_pets/#{@application.id}", method: :patch, params: {status: 2, pet_id: pet.id}%>  
   <% end %>
   </div>  
 <% end %>
