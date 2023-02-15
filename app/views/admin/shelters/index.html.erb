@@ -1,9 +1,6 @@
 
 <h1> All Shelters </h1>
-<% @shelters.each do |shelter| %>
-  <h3> <%= "Shelter Name: #{shelter.name}" %> </h3>
-  <%= "Shelter City: #{shelter.city}" %>
-<% end %>
+<%= render partial: 'partials/shelters_index' %>
 <br>
 <br>
 <br>
